@@ -62,5 +62,4 @@ def download_morphe_cli(include_prereleases: bool = False):
         "bins",
         "morphe-cli.jar",
         include_prereleases=include_prereleases,
-        version="v1.5.0",
     )
