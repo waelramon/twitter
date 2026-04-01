@@ -5,6 +5,7 @@ import subprocess
 import sys
 from typing import Optional, List
 from github import get_last_build_version
+from constants import REPO
 
 _scraper = None
 
@@ -42,7 +43,7 @@ def report_to_telegram():
     tg_token = os.environ["TG_TOKEN"]
     tg_chat_id = os.environ["TG_CHAT_ID"]
     tg_thread_id = os.environ["TG_THREAD_ID"]
-    release = get_last_build_version("crimera/twitter-apk")
+    release = get_last_build_version(REPO)
 
     if release is None:
         raise Exception("Could not fetch release")
