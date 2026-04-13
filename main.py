@@ -70,7 +70,7 @@ Changelogs:
         latest_version.version
     )
 
-    report_to_telegram()
+    report_to_telegram(tag=latest_version.version)
 
 
 def main():
